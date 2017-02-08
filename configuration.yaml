@@ -5,6 +5,7 @@ homeassistant:
   elevation: 11
   unit_system: metric
   time_zone: Europe/Stockholm
+  customize: !include customization.yaml
 
 # Enables the frontend
 frontend:
@@ -45,10 +46,7 @@ panel_iframe:
     url: 'http://192.168.1.16:6001/ChartData'
     icon: 'mdi:chart-line'
 
-#device_tracker:
-#  - platform: nmap_tracker
-#    hosts: 192.168.1.108
-#    home_interval: 5
+device_tracker: !include device_trackers.yaml
 
 switch: !include switches.yaml
 
@@ -56,3 +54,4 @@ camera: !include cameras.yaml
 
 group: !include groups.yaml
 
+automation: !include automation.yaml

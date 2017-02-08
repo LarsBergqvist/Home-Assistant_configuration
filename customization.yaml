@@ -1,0 +1,18 @@
+- entity_id: sensor.top_floor_temp
+  friendly_name: Temperature
+  icon: mdi:thermometer
+- entity_id: sensor.top_floor_pressure
+  friendly_name: Barometric pressure
+  icon: mdi:thermometer
+- entity_id: sensor.ground_floor_temp
+  friendly_name: Temperature
+  icon: mdi:thermometer
+- entity_id: sensor.ground_floor_humidity
+  friendly_name: Humidity
+  icon: mdi:water-percent
+- entity_id: sensor.outdoor_temp
+  friendly_name: Temperature
+  icon: mdi:thermometer
+- entity_id: sensor.outdoor_humidity
+  friendly_name: Humidity
+  icon: mdi:water-percent

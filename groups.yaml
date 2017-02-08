@@ -1,28 +1,38 @@
-downstairs:
-  view: yes
-  entities:
-      - sensor.ground_floor_temp
-      - sensor.ground_floor_humidity
-      - switch.windows_downstairs
-      - switch.wall_downstairs
-upstairs:
-  view: yes
-  entities:
-      - sensor.top_floor_temp
-      - sensor.top_floor_pressure
-      - switch.windows_upstairs
-      - switch.floor_upstairs
+#
+# Groups that are views
+#
+default_view:
+    view: yes
+    entities:
+        - group.groundfloor
+        - group.topfloor
+        - group.outdoor
+        - sun.sun
+        - sensor.yr_symbol
+        - device_tracker.larsiphone
+
 garage:
     view: yes
     entities:
         - sensor.garage_temp
         - sensor.garage_humidity
+        - switch.dehumidifier
+
 cams:
     view: yes
     entities:
         - camera.outdoor
         - camera.rpi
 
+automation:
+    view: yes
+    entities:
+        - automation.turn_on_garden_lights_when_sun_sets
+        - automation.turn_off_garden_lights_when_sun_rises
+
+#
+# Groups that are not views
+#
 groundfloor:
     name: Ground floor
     entities:
@@ -39,13 +49,9 @@ topfloor:
         - sensor.top_floor_temp
         - sensor.top_floor_pressure
 
-test:
-    view: yes
+outdoor:
+    name: Outdoor
     entities:
-        - group.mytest
-
-default_view:
-    view: yes
-    entities:
-        - group.groundfloor
-        - group.topfloor
+        - switch.garden_lights
+        - sensor.outdoor_temp
+        - sensor.outdoor_humidity
