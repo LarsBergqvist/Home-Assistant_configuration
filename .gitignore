@@ -1,0 +1,7 @@
+.HA_VERSION
+deps
+.uuid
+*.db
+.AppleDouble/
+home-assistant.log
+secrets.yaml
