@@ -1,0 +1,32 @@
+- platform: mqtt
+  state_topic: "Home/GroundFloor/Temperature"
+  name: 'Ground floor temp'
+  unit_of_measurement: "C"
+- platform: mqtt
+  state_topic: "Home/GroundFloor/Humidity"
+  name: 'Ground floor humidity'
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: "Home/Outdoor/Temperature"
+  name: 'Outdoor temp'
+  unit_of_measurement: "C"
+- platform: mqtt
+  state_topic: "Home/Outdoor/Humidity"
+  name: 'Outdoor humidity'
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: "Home/TopFloor/Temperature"
+  name: 'Top floor temp'
+  unit_of_measurement: "C"
+- platform: mqtt
+  state_topic: "Home/TopFloor/Pressure"
+  name: 'Top floor pressure'
+  unit_of_measurement: "hPa"
+- platform: mqtt
+  state_topic: "Home/Garage/Temperature"
+  name: 'Garage temp'
+  unit_of_measurement: "C"
+- platform: mqtt
+  state_topic: "Home/Garage/Humidity"
+  name: 'Garage humidity'
+  unit_of_measurement: "%"

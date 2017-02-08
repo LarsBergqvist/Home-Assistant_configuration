@@ -1,0 +1,51 @@
+downstairs:
+  view: yes
+  entities:
+      - sensor.ground_floor_temp
+      - sensor.ground_floor_humidity
+      - switch.windows_downstairs
+      - switch.wall_downstairs
+upstairs:
+  view: yes
+  entities:
+      - sensor.top_floor_temp
+      - sensor.top_floor_pressure
+      - switch.windows_upstairs
+      - switch.floor_upstairs
+garage:
+    view: yes
+    entities:
+        - sensor.garage_temp
+        - sensor.garage_humidity
+cams:
+    view: yes
+    entities:
+        - camera.outdoor
+        - camera.rpi
+
+groundfloor:
+    name: Ground floor
+    entities:
+        - switch.window_lights_downstairs
+        - switch.wall_lights_downstairs
+        - sensor.ground_floor_temp
+        - sensor.ground_floor_humidity
+
+topfloor:
+    name: Top floor
+    entities:
+        - switch.window_lights_upstairs
+        - switch.floor_light_upstairs
+        - sensor.top_floor_temp
+        - sensor.top_floor_pressure
+
+test:
+    view: yes
+    entities:
+        - group.mytest
+
+default_view:
+    view: yes
+    entities:
+        - group.groundfloor
+        - group.topfloor

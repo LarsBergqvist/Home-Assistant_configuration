@@ -1,0 +1,9 @@
+- platform: mjpeg
+  mjpeg_url: http://192.168.1.16:8081
+  name: outdoor
+  username: !secret motion_user
+  password: !secret motion_pwd
+- platform: rpi_camera
+  name: rpi
+  filepath: ~/.homeassistant/cam
+  timelapse: 5000

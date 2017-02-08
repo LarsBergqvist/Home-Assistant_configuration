@@ -1,0 +1,25 @@
+- platform: rest
+  name: 'Window lights upstairs'
+  resource: http://192.168.1.16:5000/Outlets/api/outlets/1/1
+  body_on: 'on'
+  body_off: 'off'
+- platform: rest
+  name: 'Floor light upstairs'
+  resource: http://192.168.1.16:5000/Outlets/api/outlets/1/4
+  body_on: 'on'
+  body_off: 'off'
+- platform: rest
+  name: 'Window lights downstairs'
+  resource: http://192.168.1.16:5000/Outlets/api/outlets/1/2
+  body_on: 'on'
+  body_off: 'off'
+- platform: rest
+  name: 'Wall lights downstairs'
+  resource: http://192.168.1.16:5000/Outlets/api/outlets/1/3
+  body_on: 'on'
+  body_off: 'off'
+- platform: rest
+  name: 'Garden lights'
+  resource: http://192.168.1.16:5000/Outlets/api/outlets/2/1
+  body_on: 'on'
+  body_off: 'off'
