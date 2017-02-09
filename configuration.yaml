@@ -31,6 +31,7 @@ sun:
 # Weather Prediction
 sensor yr:
   - platform: yr
+    name: Weather
 
 sensor: !include sensors.yaml
 

@@ -7,16 +7,13 @@ default_view:
         - group.groundfloor
         - group.topfloor
         - group.outdoor
-        - sun.sun
-        - sensor.yr_symbol
-        - device_tracker.larsiphone
+        - group.weather_and_sun
+        - group.family
 
 garage:
     view: yes
     entities:
-        - sensor.garage_temp
-        - sensor.garage_humidity
-        - switch.dehumidifier
+        - group.garage_group
 
 cams:
     view: yes
@@ -29,6 +26,7 @@ automation:
     entities:
         - automation.turn_on_garden_lights_when_sun_sets
         - automation.turn_off_garden_lights_when_sun_rises
+        - automation.turn_off_indoor_lights_at_night
 
 #
 # Groups that are not views
@@ -55,3 +53,29 @@ outdoor:
         - switch.garden_lights
         - sensor.outdoor_temp
         - sensor.outdoor_humidity
+
+indoor_lights:
+    name: Indoor lights
+    entities:
+        - switch.window_lights_downstairs
+        - switch.wall_lights_downstairs
+        - switch.window_lights_upstairs
+        - switch.floor_light_upstairs
+    
+weather_and_sun:
+    name: Weather and sun
+    entities:
+        - sun.sun
+        - sensor.yr_symbol
+
+family:
+    name: Family
+    entities:
+        - device_tracker.larsiphone
+
+garage_group:
+    name: Garage
+    entities:
+        - sensor.garage_temp
+        - sensor.garage_humidity
+        - switch.dehumidifier
