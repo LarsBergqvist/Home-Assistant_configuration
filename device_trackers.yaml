@@ -1,3 +1,4 @@
-- platform: nmap_tracker
-  hosts: 192.168.1.108
-  home_interval: 5
+#- platform: nmap_tracker
+#  hosts: 192.168.1.108
+#  home_interval: 5
+- platform: owntracks

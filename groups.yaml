@@ -24,9 +24,8 @@ cams:
 automation:
     view: yes
     entities:
-        - automation.turn_on_garden_lights_when_sun_sets
-        - automation.turn_off_garden_lights_when_sun_rises
-        - automation.turn_off_indoor_lights_at_night
+        - group.automation_garden_group
+        - group.automation_indoor_group
 
 #
 # Groups that are not views
@@ -61,6 +60,12 @@ indoor_lights:
         - switch.wall_lights_downstairs
         - switch.window_lights_upstairs
         - switch.floor_light_upstairs
+
+window_lights:
+    name: Window lights
+    entities:
+        - switch.window_lights_downstairs
+        - switch.window_lights_upstairs
     
 weather_and_sun:
     name: Weather and sun
@@ -68,10 +73,10 @@ weather_and_sun:
         - sun.sun
         - sensor.yr_symbol
 
-family:
-    name: Family
-    entities:
-        - device_tracker.larsiphone
+#family:
+#    name: Family
+#    entities:
+#        - device_tracker.owntracks_lars
 
 garage_group:
     name: Garage
@@ -79,3 +84,15 @@ garage_group:
         - sensor.garage_temp
         - sensor.garage_humidity
         - switch.dehumidifier
+
+automation_garden_group:
+    name: automation_garden
+    entities:
+        - automation.turn_on_garden_lights_when_sun_sets
+        - automation.turn_off_garden_lights_when_sun_rises
+
+automation_indoor_group:
+    name: automation_indoor
+    entities:
+        - automation.turn_on_window_lights_at_sunset
+        - automation.turn_off_indoor_lights_at_night

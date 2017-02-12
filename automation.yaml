@@ -18,6 +18,16 @@
     service: switch.turn_off
     entity_id: switch.garden_lights
 
+- alias: Turn on window lights at sunset
+  initial_state: True
+  hide_entity: False
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: switch.turn_on
+    entity_id: group.window_lights
+
 - alias: Turn off indoor lights at night
   initial_state: True
   hide_entity: False
