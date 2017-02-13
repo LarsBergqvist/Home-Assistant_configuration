@@ -21,6 +21,11 @@ cams:
         - camera.outdoor
         - camera.rpi
 
+computers_stat:
+    view: yes
+    entities:
+        - group.computers_group
+
 automation:
     view: yes
     entities:
@@ -96,3 +101,13 @@ automation_indoor_group:
     entities:
         - automation.turn_on_window_lights_at_sunset
         - automation.turn_off_indoor_lights_at_night
+
+computers_group:
+    name: Computers
+    entities:
+        - sensor.rpi3_temperature
+        - sensor.rpi2_temperature
+        - sensor.cpu_use
+        - sensor.ram_free
+        - sensor.disk_use_
+

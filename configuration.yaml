@@ -12,9 +12,14 @@ frontend:
 
 http:
   api_password: !secret ha_pwd
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
 
 # Checks for available updates
 updater:
+
+logger:
+  default: error
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:

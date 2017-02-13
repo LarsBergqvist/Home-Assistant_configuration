@@ -1,3 +1,4 @@
+# climate sensors
 - platform: mqtt
   state_topic: "Home/GroundFloor/Temperature"
   name: ground_floor_temp
@@ -30,3 +31,21 @@
   state_topic: "Home/Garage/Humidity"
   name: garage_humidity
   unit_of_measurement: "%"
+
+# computer sensors
+- platform: mqtt
+  state_topic: "Home/RPI3/Temp"
+  name: rpi3_temperature
+  unit_of_measurement: "C"
+- platform: mqtt
+  state_topic: "Home2/RPI2/Temp"
+  name: rpi2_temperature
+  unit_of_measurement: "C"
+- platform: systemmonitor
+  name: system
+  resources:
+    - type: processor_use
+    - type: memory_free
+    - type: disk_use_percent
+      arg: '/'
+

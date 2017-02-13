@@ -7,3 +7,4 @@ home-assistant.log
 secrets.yaml
 known_devices.yaml
 *.db-journal
+*.pem
