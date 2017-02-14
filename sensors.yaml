@@ -49,3 +49,17 @@
     - type: disk_use_percent
       arg: '/'
 
+- platform: template
+  sensors:
+    day_night:
+      friendly_name: 'Day/Night'
+      value_template: '{% if is_state("sun.sun", "above_horizon") %}Day{% else %}Night{% endif %}'
+      icon_template: '{% if is_state("sun.sun", "above_horizon") %}mdi:weather-sunny{% else %}mdi:weather-night{% endif %}'
+    sunset:
+      friendly_name: 'Next sunset'
+      value_template: '{{ states.sun.sun.attributes.next_setting }}'
+      icon_template: mdi:weather-sunset-down
+    sunrise:
+      friendly_name: 'Next sunrise'
+      value_template: '{{ states.sun.sun.attributes.next_rising }}'
+      icon_template: mdi:weather-sunset-up

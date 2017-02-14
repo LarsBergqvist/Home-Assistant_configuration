@@ -37,7 +37,21 @@ sun:
 sensor yr:
   - platform: yr
     name: Weather
-
+    monitored_conditions:
+        - temperature
+        - symbol
+        - precipitation
+        - windSpeed
+        - pressure
+        - windDirection
+        - humidity
+        - fog
+        - cloudiness
+        - lowClouds
+        - mediumClouds
+        - highClouds
+        - dewpointTemperature
+        
 sensor: !include sensors.yaml
 
 mqtt:
@@ -61,3 +75,7 @@ camera: !include cameras.yaml
 group: !include groups.yaml
 
 automation: !include automation.yaml
+
+#zwave: !include zwave.yaml
+#zwave:
+#  usb_path: /dev/ttyAMA0

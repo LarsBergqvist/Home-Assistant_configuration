@@ -75,8 +75,15 @@ window_lights:
 weather_and_sun:
     name: Weather and sun
     entities:
-        - sun.sun
+        - sensor.day_night
+        - sensor.sunset
+        - sensor.sunrise
         - sensor.yr_symbol
+        - sensor.yr_pressure
+        - sensor.yr_temperature
+        - sensor.yr_wind_speed
+        - sensor.yr_wind_direction
+        - sensor.yr_cloudiness
 
 #family:
 #    name: Family
