@@ -8,3 +8,7 @@ secrets.yaml
 known_devices.yaml
 *.db-journal
 *.pem
+OZW_Log.txt
+pyozw.sqlite
+zwscene.xml
+

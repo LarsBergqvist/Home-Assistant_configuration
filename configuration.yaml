@@ -2,7 +2,7 @@ homeassistant:
   name: Our House
   latitude: !secret latitude
   longitude: !secret longitude
-  elevation: 11
+  elevation: 38
   unit_system: metric
   time_zone: Europe/Stockholm
   customize: !include customization.yaml
@@ -12,8 +12,8 @@ frontend:
 
 http:
   api_password: !secret ha_pwd
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
+#  ssl_certificate: !secret ssl_certificate
+#  ssl_key: !secret ssl_key
 
 # Checks for available updates
 updater:

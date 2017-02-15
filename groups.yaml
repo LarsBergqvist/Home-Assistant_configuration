@@ -9,6 +9,7 @@ default_view:
         - group.outdoor
         - group.weather_and_sun
         - group.family
+        - group.laundry
 
 garage:
     view: yes
@@ -35,6 +36,12 @@ automation:
 #
 # Groups that are not views
 #
+laundry:
+    name: Laundry room
+    entities:
+        - sensor.water_flooding
+        - sensor.laundry_temperature
+
 groundfloor:
     name: Ground floor
     entities:

@@ -19,7 +19,7 @@
 - entity_id: switch.dehumidifier
   friendly_name: Dehumidifier
 #
-# Switch customizations
+# Sensor customizations
 #
 - entity_id: sensor.top_floor_temp
   friendly_name: Temperature
@@ -45,7 +45,9 @@
 - entity_id: sensor.garage_humidity
   friendly_name: Humidity
   icon: mdi:water-percent
-
 - entity_id: sensor.yr_symbol
   friendly_name: Weather
+- entity_id: sensor.laundry_temperature
+  friendly_name: Temperature
+  icon: mdi:thermometer
 

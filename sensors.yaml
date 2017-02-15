@@ -32,6 +32,18 @@
   name: garage_humidity
   unit_of_measurement: "%"
 
+# z-wave sensor values via z-way
+- platform: mqtt
+  state_topic: "zway/Laundry/Temperature"
+  name: laundry_temperature
+  unit_of_measurement: "C"
+- platform: mqtt
+  state_topic: "zway/Laundry/Tamper"
+  name: laundry_tamper
+- platform: mqtt
+  state_topic: "zway/Laundry/Water"
+  name: laundry_water
+
 # computer sensors
 - platform: mqtt
   state_topic: "Home/RPI3/Temp"
@@ -63,3 +75,7 @@
       friendly_name: 'Next sunrise'
       value_template: '{{ states.sun.sun.attributes.next_rising }}'
       icon_template: mdi:weather-sunset-up
+    water_flooding:
+      value_template: '{% if is_state("sensor.laundry_water", "on") %}--- !!!FLOODING!!! ---{% else %}Relax, no problem!{% endif %}'
+      icon_template: '{% if is_state("sensor.laundry_water", "on") %}mdi:alert{% else %}mdi:emoticon-cool{% endif %}'
+      friendly_name: 'Flood status'
