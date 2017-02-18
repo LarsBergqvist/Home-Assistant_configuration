@@ -2,7 +2,7 @@
 - platform: mqtt
   state_topic: "Home/GroundFloor/Temperature"
   name: ground_floor_temp
-  unit_of_measurement: "C"
+  unit_of_measurement: "°C"
 - platform: mqtt
   state_topic: "Home/GroundFloor/Humidity"
   name: ground_floor_humidity
@@ -10,7 +10,7 @@
 - platform: mqtt
   state_topic: "Home/Outdoor/Temperature"
   name: outdoor_temp
-  unit_of_measurement: "C"
+  unit_of_measurement: "°C"
 - platform: mqtt
   state_topic: "Home/Outdoor/Humidity"
   name: outdoor_humidity
@@ -18,7 +18,7 @@
 - platform: mqtt
   state_topic: "Home/TopFloor/Temperature"
   name: top_floor_temp
-  unit_of_measurement: "C"
+  unit_of_measurement: "°C"
 - platform: mqtt
   state_topic: "Home/TopFloor/Pressure"
   name: top_floor_pressure
@@ -26,17 +26,20 @@
 - platform: mqtt
   state_topic: "Home/Garage/Temperature"
   name: garage_temp
-  unit_of_measurement: "C"
+  unit_of_measurement: "°C"
 - platform: mqtt
   state_topic: "Home/Garage/Humidity"
   name: garage_humidity
   unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: "Home/Frontdoor/Opened"
+  name: front_door_opened
 
 # z-wave sensor values via z-way
 - platform: mqtt
   state_topic: "zway/Laundry/Temperature"
   name: laundry_temperature
-  unit_of_measurement: "C"
+  unit_of_measurement: "°C"
 - platform: mqtt
   state_topic: "zway/Laundry/Tamper"
   name: laundry_tamper
@@ -48,11 +51,11 @@
 - platform: mqtt
   state_topic: "Home/RPI3/Temp"
   name: rpi3_temperature
-  unit_of_measurement: "C"
+  unit_of_measurement: "°C"
 - platform: mqtt
   state_topic: "Home2/RPI2/Temp"
   name: rpi2_temperature
-  unit_of_measurement: "C"
+  unit_of_measurement: "°C"
 - platform: systemmonitor
   name: system
   resources:
@@ -60,6 +63,11 @@
     - type: memory_free
     - type: disk_use_percent
       arg: '/'
+
+
+- platform: time_date
+  display_options:
+    - 'date_time'
 
 - platform: template
   sensors:
@@ -69,11 +77,11 @@
       icon_template: '{% if is_state("sun.sun", "above_horizon") %}mdi:weather-sunny{% else %}mdi:weather-night{% endif %}'
     sunset:
       friendly_name: 'Next sunset'
-      value_template: '{{ states.sun.sun.attributes.next_setting }}'
+      value_template: '{{ as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom("%a %H:%M", True) }}'
       icon_template: mdi:weather-sunset-down
     sunrise:
       friendly_name: 'Next sunrise'
-      value_template: '{{ states.sun.sun.attributes.next_rising }}'
+      value_template: '{{ as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom("%a %H:%M", True) }}'
       icon_template: mdi:weather-sunset-up
     water_flooding:
       value_template: '{% if is_state("sensor.laundry_water", "on") %}--- !!!FLOODING!!! ---{% else %}Relax, no problem!{% endif %}'

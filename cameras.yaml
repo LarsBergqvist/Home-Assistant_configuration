@@ -5,5 +5,5 @@
   password: !secret motion_pwd
 - platform: rpi_camera
   name: rpi
-  filepath: ~/.homeassistant/cam
+  filepath: /tmp/cam
   timelapse: 5000

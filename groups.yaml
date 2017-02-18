@@ -9,7 +9,6 @@ default_view:
         - group.outdoor
         - group.weather_and_sun
         - group.family
-        - group.laundry
 
 garage:
     view: yes
@@ -33,10 +32,22 @@ automation:
         - group.automation_garden_group
         - group.automation_indoor_group
 
+media:
+    view: yes
+    entities:
+        - media_player.kitchen
+        - media_player.vardagsrum
+        - media_player.sovrum
+        - media_player.squeezebox
+
+laundry:
+    view: yes
+    entities:
+        - group.laundry_room
 #
 # Groups that are not views
 #
-laundry:
+laundry_room:
     name: Laundry room
     entities:
         - sensor.water_flooding
@@ -49,6 +60,7 @@ groundfloor:
         - switch.wall_lights_downstairs
         - sensor.ground_floor_temp
         - sensor.ground_floor_humidity
+        - sensor.door_last_opened
 
 topfloor:
     name: Top floor
@@ -82,6 +94,7 @@ window_lights:
 weather_and_sun:
     name: Weather and sun
     entities:
+        - sensor.date__time
         - sensor.day_night
         - sensor.sunset
         - sensor.sunrise
