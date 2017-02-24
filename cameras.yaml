@@ -1,9 +1,14 @@
 - platform: mjpeg
   mjpeg_url: http://192.168.1.16:8081
-  name: outdoor
+  name: outdoor1
+  username: !secret motion_user
+  password: !secret motion_pwd
+- platform: mjpeg
+  mjpeg_url: http://192.168.1.17:8081
+  name: outdoor2
   username: !secret motion_user
   password: !secret motion_pwd
 - platform: rpi_camera
   name: rpi
-  filepath: /tmp/cam
+  file_path: /tmp/cam/image.png
   timelapse: 5000

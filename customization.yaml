@@ -47,7 +47,10 @@
   icon: mdi:water-percent
 - entity_id: sensor.yr_symbol
   friendly_name: Weather
-- entity_id: sensor.laundry_temperature
+- entity_id: sensor.laundry_temp
   friendly_name: Temperature
   icon: mdi:thermometer
+- entity_id: sensor.laundry_humidity
+  friendly_name: Humidity
+  icon: mdi:water-percent
 

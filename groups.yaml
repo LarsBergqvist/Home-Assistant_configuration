@@ -9,6 +9,7 @@ default_view:
         - group.outdoor
         - group.weather_and_sun
         - group.family
+        - sensor.door_last_opened
 
 garage:
     view: yes
@@ -18,7 +19,8 @@ garage:
 cams:
     view: yes
     entities:
-        - camera.outdoor
+        - camera.outdoor1
+        - camera.outdoor2
         - camera.rpi
 
 computers_stat:
@@ -51,7 +53,8 @@ laundry_room:
     name: Laundry room
     entities:
         - sensor.water_flooding
-        - sensor.laundry_temperature
+        - sensor.laundry_temp
+        - sensor.laundry_humidity
 
 groundfloor:
     name: Ground floor
