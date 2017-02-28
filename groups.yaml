@@ -26,7 +26,8 @@ cams:
 computers_stat:
     view: yes
     entities:
-        - group.computers_group
+        - group.raspberrypi3_group
+        - group.raspberrypi2_group
 
 automation:
     view: yes
@@ -132,12 +133,17 @@ automation_indoor_group:
         - automation.turn_on_window_lights_at_sunset
         - automation.turn_off_indoor_lights_at_night
 
-computers_group:
-    name: Computers
+raspberrypi3_group:
+    name: Raspberry Pi 3
     entities:
         - sensor.rpi3_temperature
+
+raspberrypi2_group:
+    name: Raspberry Pi 2
+    entities:
         - sensor.rpi2_temperature
         - sensor.cpu_use
         - sensor.ram_free
         - sensor.disk_use_
+
 

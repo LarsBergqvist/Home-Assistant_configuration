@@ -10,5 +10,5 @@
   password: !secret motion_pwd
 - platform: rpi_camera
   name: rpi
-  file_path: /tmp/cam/image.png
+  file_path: /tmp/cam/image.jpg
   timelapse: 5000

@@ -61,7 +61,7 @@
   name: rpi3_temperature
   unit_of_measurement: "°C"
 - platform: mqtt
-  state_topic: "Home2/RPI2/Temp"
+  state_topic: "Home/RPI2/Temp"
   name: rpi2_temperature
   unit_of_measurement: "°C"
 - platform: systemmonitor
