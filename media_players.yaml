@@ -1,3 +1,8 @@
 - platform: sonos
+  hosts: 
+    - 192.168.1.220
+    - 192.168.1.226
+    - 192.168.1.137
+
 - platform: squeezebox
   host: 192.168.1.21

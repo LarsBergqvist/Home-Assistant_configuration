@@ -10,6 +10,7 @@ default_view:
         - group.weather_and_sun
         - group.family
         - sensor.door_last_opened
+        - group.tracker_group
 
 garage:
     view: yes
@@ -145,5 +146,11 @@ raspberrypi2_group:
         - sensor.cpu_use
         - sensor.ram_free
         - sensor.disk_use_
+
+tracker_group:
+    name: Tracker group
+    entities:
+        - device_tracker.user_iphone
+        - device_tracker.lars_nexus
 
 

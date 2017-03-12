@@ -1,56 +1,55 @@
 #
 # Switch customizations
 #
-- entity_id: switch.window_lights_downstairs
+switch.window_lights_downstairs:
   friendly_name: Window lights
   icon: mdi:lightbulb
-- entity_id: switch.wall_lights_downstairs
+switch.wall_lights_downstairs:
   friendly_name: Wall lights
   icon: mdi:lightbulb
-- entity_id: switch.window_lights_upstairs
+switch.window_lights_upstairs:
   friendly_name: Window lights
   icon: mdi:lightbulb
-- entity_id: switch.floor_light_upstairs
+switch.floor_light_upstairs:
   friendly_name: Floor light
   icon: mdi:lightbulb
-- entity_id: switch.garden_lights
+switch.garden_lights:
   friendly_name: Garden lights
   icon: mdi:lightbulb
-- entity_id: switch.dehumidifier
+switch.dehumidifier:
   friendly_name: Dehumidifier
 #
 # Sensor customizations
 #
-- entity_id: sensor.top_floor_temp
+sensor.top_floor_temp:
   friendly_name: Temperature
   icon: mdi:thermometer
-- entity_id: sensor.top_floor_pressure
+sensor.top_floor_pressure:
   friendly_name: Barometric pressure
   icon: mdi:speedometer
-- entity_id: sensor.ground_floor_temp
+sensor.ground_floor_temp:
   friendly_name: Temperature
   icon: mdi:thermometer
-- entity_id: sensor.ground_floor_humidity
+sensor.ground_floor_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
-- entity_id: sensor.outdoor_temp
+sensor.outdoor_temp:
   friendly_name: Temperature
   icon: mdi:thermometer
-- entity_id: sensor.outdoor_humidity
+sensor.outdoor_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
-- entity_id: sensor.garage_temp
+sensor.garage_temp:
   friendly_name: Temperature
   icon: mdi:thermometer
-- entity_id: sensor.garage_humidity
+sensor.garage_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
-- entity_id: sensor.yr_symbol
+sensor.yr_symbol:
   friendly_name: Weather
-- entity_id: sensor.laundry_temp
+sensor.laundry_temp:
   friendly_name: Temperature
   icon: mdi:thermometer
-- entity_id: sensor.laundry_humidity
+sensor.laundry_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
-
