@@ -33,6 +33,9 @@ sensor.ground_floor_temp:
 sensor.ground_floor_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
+sensor.garden_temp:
+  friendly_name: Garden temperature
+  icon: mdi:thermometer
 sensor.outdoor_temp:
   friendly_name: Temperature
   icon: mdi:thermometer

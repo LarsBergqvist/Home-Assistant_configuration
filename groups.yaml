@@ -79,6 +79,7 @@ outdoor:
     name: Outdoor
     entities:
         - switch.garden_lights
+        - sensor.garden_temp
         - sensor.outdoor_temp
         - sensor.outdoor_humidity
 

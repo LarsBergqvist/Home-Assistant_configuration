@@ -8,6 +8,10 @@
   name: ground_floor_humidity
   unit_of_measurement: "%"
 - platform: mqtt
+  state_topic: "Home/Garden/Temperature"
+  name: garden_temp
+  unit_of_measurement: "°C"
+- platform: mqtt
   state_topic: "Home/Outdoor/Temperature"
   name: outdoor_temp
   unit_of_measurement: "°C"
@@ -35,11 +39,11 @@
   state_topic: "Home/FrontDoor/Status"
   name: front_door_opened
 - platform: mqtt
-  state_topic: "Home2/Laundry/Temperature"
+  state_topic: "Home/Laundry/Temperature"
   name: laundry_temp
   unit_of_measurement: "°C"
 - platform: mqtt
-  state_topic: "Home2/Laundry/Humidity"
+  state_topic: "Home/Laundry/Humidity"
   name: laundry_humidity
   unit_of_measurement: "%"
 
