@@ -36,13 +36,13 @@ automation:
         - group.automation_garden_group
         - group.automation_indoor_group
 
-media:
-    view: yes
-    entities:
-        - media_player.kitchen
-        - media_player.vardagsrum
-        - media_player.sovrum
-        - media_player.squeezebox
+#media:
+#    view: yes
+#    entities:
+#        - media_player.kitchen
+#        - media_player.vardagsrum
+#        - media_player.sovrum
+#        - media_player.squeezebox
 
 laundry:
     view: yes
