@@ -7,9 +7,6 @@ homeassistant:
   time_zone: Europe/Stockholm
   customize: !include customization.yaml
 
-# Enables the frontend
-frontend:
-
 http:
   api_password: !secret ha_pwd
 #  ssl_certificate: !secret ssl_certificate
@@ -20,7 +17,7 @@ recorder:
   purge_days: 3
 
 # Sonos and Squeezebox
-#media_player: !include media_players.yaml
+media_player: !include media_players.yaml
 
 # Checks for available updates
 updater:
@@ -72,6 +69,11 @@ panel_iframe:
     title: 'Charts'
     url: 'http://192.168.1.16:6001/ChartData'
     icon: 'mdi:chart-line'
+  grafana:
+    title: 'Grafana'
+    url: http://192.168.1.16:3000/dashboard/db/sensordata_test?from=1498894609416&to=1498905409417
+    icon: 'mdi:chart-areaspline'
+
 
 device_tracker: !include device_trackers.yaml
 
