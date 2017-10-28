@@ -7,6 +7,10 @@ homeassistant:
   time_zone: Europe/Stockholm
   customize: !include customization.yaml
 
+config:
+
+map:
+
 http:
   api_password: !secret ha_pwd
 #  ssl_certificate: !secret ssl_certificate
@@ -14,7 +18,8 @@ http:
 
 # purge db after 3 days. problems with sqlite
 recorder:
-  purge_days: 3
+  purge_interval: 1
+  purge_keep_days: 3
 
 # Sonos and Squeezebox
 media_player: !include media_players.yaml
@@ -24,6 +29,8 @@ updater:
 
 logger:
   default: error
+  logs:
+    homeassistant.components.media_player: critical
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -59,7 +66,7 @@ sensor yr:
 sensor: !include sensors.yaml
 
 mqtt:
-  broker: 192.168.1.16
+  broker: 192.168.1.17
   port: 1883
   client_id: home-assistant-1
   keepalive: 60
