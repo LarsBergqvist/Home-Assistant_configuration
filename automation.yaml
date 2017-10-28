@@ -18,12 +18,13 @@
     service: switch.turn_off
     entity_id: switch.garden_lights
 
-- alias: Turn on window lights at sunset
+- alias: Turn on window lights 30min before sunset
   initial_state: True
   hide_entity: False
   trigger:
     platform: sun
     event: sunset
+    offset: '-00:30:00'
   action:
     service: switch.turn_on
     entity_id: group.window_lights
@@ -33,7 +34,7 @@
   hide_entity: False
   trigger:
     platform: time
-    at: '23:00:00'
+    at: '22:30:00'
   action:
     service: switch.turn_off
     entity_id: group.indoor_lights

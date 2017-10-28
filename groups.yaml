@@ -7,11 +7,9 @@ default_view:
         - group.groundfloor
         - group.topfloor
         - group.outdoor
-        - group.media
         - group.weather_and_sun
-        - group.family
-        - sensor.door_last_opened
-        - group.tracker_group
+#        - group.family
+#        - group.tracker_group
 
 media:
     view: yes
