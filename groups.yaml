@@ -30,6 +30,13 @@ garage:
     view: yes
     entities:
         - group.garage_group
+        - group.garage_lights
+
+garage_lights:
+    view: no
+    entities:
+        - light.hue_white_lamp_1
+        - light.hue_white_lamp_2
 
 computers_stat:
     view: yes
@@ -42,6 +49,7 @@ automation:
     entities:
         - group.automation_garden_group
         - group.automation_indoor_group
+        - group.automation_garage_group
 
 laundry:
     view: yes
@@ -134,6 +142,12 @@ automation_indoor_group:
     entities:
         - automation.turn_on_window_lights_at_sunset
         - automation.turn_off_indoor_lights_at_night
+
+automation_garage_group:
+    name: automation_garage
+    entities:
+        - automation.turn_on_garage_lights_when_sun_sets
+        - automation.turn_off_garage_lights_when_sun_rises
 
 raspberrypi3_group:
     name: Raspberry Pi 3

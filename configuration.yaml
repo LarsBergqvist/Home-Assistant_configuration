@@ -7,8 +7,6 @@ homeassistant:
   time_zone: Europe/Stockholm
   customize: !include customization.yaml
 
-config:
-
 map:
 
 http:
@@ -91,4 +89,6 @@ camera: !include cameras.yaml
 group: !include groups.yaml
 
 automation: !include automation.yaml
+
+discovery:
 
