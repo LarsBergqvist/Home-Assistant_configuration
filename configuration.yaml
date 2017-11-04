@@ -48,10 +48,14 @@ logbook:
 # Track the sun
 sun:
 
+# Moon
+sensor moon:
+  - platform: moon
+
 # Weather Prediction
 sensor yr:
   - platform: yr
-    name: Weather
+    name: yr
     monitored_conditions:
         - temperature
         - symbol

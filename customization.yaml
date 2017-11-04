@@ -55,11 +55,23 @@ sensor.garage_temp:
 sensor.garage_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
-sensor.yr_symbol:
-  friendly_name: Weather
 sensor.laundry_temp:
   friendly_name: Temperature
   icon: mdi:thermometer
 sensor.laundry_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
+sensor.yr_pressure:
+  friendly_name: yr Barometric pressure
+  icon: mdi:speedometer
+sensor.yr_wind_speed:
+  friendly_name: yr Wind speed
+  icon: mdi:weather-windy-variant
+sensor.yr_wind_direction:
+  friendly_name: yr Wind direction
+  icon: mdi:weather-windy-variant
+sensor.yr_cloudiness:
+  friendly_name: yr Cloudiness
+  icon: mdi:weather-cloudy
+
+

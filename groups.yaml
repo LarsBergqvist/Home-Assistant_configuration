@@ -90,15 +90,15 @@ window_lights:
         - switch.window_lights_upstairs
     
 weather_and_sun:
-    name: Weather and sun
+    name: Sun, moon and weather(yr.no)
     entities:
         - sensor.date__time
         - sensor.day_night
         - sensor.sunset
         - sensor.sunrise
-        - sensor.yr_symbol
-        - sensor.yr_pressure
+        - sensor.moon
         - sensor.yr_temperature
+        - sensor.yr_pressure
         - sensor.yr_wind_speed
         - sensor.yr_wind_direction
         - sensor.yr_cloudiness
