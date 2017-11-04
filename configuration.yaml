@@ -7,6 +7,8 @@ homeassistant:
   time_zone: Europe/Stockholm
   customize: !include customization.yaml
 
+config:
+
 map:
 
 http:

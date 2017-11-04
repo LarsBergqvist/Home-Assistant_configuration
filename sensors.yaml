@@ -47,34 +47,43 @@
   name: laundry_humidity
   unit_of_measurement: "%"
 
-# z-wave sensor values via z-way
-#- platform: mqtt
-#  state_topic: "zway/Laundry/Temperature"
-#  name: laundry_temperature
-#  unit_of_measurement: "°C"
-#- platform: mqtt
-#  state_topic: "zway/Laundry/Tamper"
-#  name: laundry_tamper
-- platform: mqtt
-  state_topic: "zway/Laundry/Water"
-  name: laundry_water
-
 # computer sensors
 - platform: mqtt
   state_topic: "Home/RPI3/Temp"
   name: rpi3_temperature
   unit_of_measurement: "°C"
 - platform: mqtt
+  state_topic: "Home/RPI3/CpuUsagePercent"
+  name: rpi3_cpu_usage
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: "Home/RPI3/MemoryUsagePercent"
+  name: rpi3_memory_usage
+  unit_of_measurement: "%"
+- platform: mqtt
   state_topic: "Home/RPI2/Temp"
   name: rpi2_temperature
   unit_of_measurement: "°C"
-- platform: systemmonitor
-  name: system
-  resources:
-    - type: processor_use
-    - type: memory_free
-    - type: disk_use_percent
-      arg: '/'
+- platform: mqtt
+  state_topic: "Home/RPI2/CpuUsagePercent"
+  name: rpi2_cpu_usage
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: "Home/RPI2/MemoryUsagePercent"
+  name: rpi2_memory_usage
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: "Home/RPI32/Temp"
+  name: rpi32_temperature
+  unit_of_measurement: "°C"
+- platform: mqtt
+  state_topic: "Home/RPI32/CpuUsagePercent"
+  name: rpi32_cpu_usage
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: "Home/RPI32/MemoryUsagePercent"
+  name: rpi32_memory_usage
+  unit_of_measurement: "%"
 
 
 - platform: time_date
@@ -99,7 +108,3 @@
       friendly_name: 'Next sunrise'
       value_template: '{{ as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom("%a %H:%M", True) }}'
       icon_template: mdi:weather-sunset-up
-    water_flooding:
-      value_template: '{% if is_state("sensor.laundry_water", "on") %}--- !!!FLOODING!!! ---{% else %}Relax, no problem!{% endif %}'
-      icon_template: '{% if is_state("sensor.laundry_water", "on") %}mdi:alert{% else %}mdi:emoticon-cool{% endif %}'
-      friendly_name: 'Flood status'

@@ -23,8 +23,3 @@
   resource: http://192.168.1.16:5000/Outlets/api/outlets/2/1
   body_on: 'on'
   body_off: 'off'
-- platform: rest
-  name: dehumidifier
-  resource: http://192.168.1.16:5000/Outlets/api/outlets/2/2
-  body_on: 'on'
-  body_off: 'off'

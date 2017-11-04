@@ -8,8 +8,8 @@ default_view:
         - group.topfloor
         - group.outdoor
         - group.weather_and_sun
-#        - group.family
-#        - group.tracker_group
+        - group.garage_group
+        - group.laundry_room
 
 media:
     view: yes
@@ -26,23 +26,12 @@ cams:
         - camera.outdoor2
         - camera.rpi
 
-garage:
-    view: yes
-    entities:
-        - group.garage_group
-        - group.garage_lights
-
-garage_lights:
-    view: no
-    entities:
-        - light.hue_white_lamp_1
-        - light.hue_white_lamp_2
-
 computers_stat:
     view: yes
     entities:
         - group.raspberrypi3_group
         - group.raspberrypi2_group
+        - group.raspberrypi32_group
 
 automation:
     view: yes
@@ -51,17 +40,12 @@ automation:
         - group.automation_indoor_group
         - group.automation_garage_group
 
-laundry:
-    view: yes
-    entities:
-        - group.laundry_room
 #
 # Groups that are not views
 #
 laundry_room:
     name: Laundry room
     entities:
-        - sensor.water_flooding
         - sensor.laundry_temp
         - sensor.laundry_humidity
 
@@ -129,7 +113,8 @@ garage_group:
     entities:
         - sensor.garage_temp
         - sensor.garage_humidity
-        - switch.dehumidifier
+        - light.hue_white_lamp_1
+        - light.hue_white_lamp_2
 
 automation_garden_group:
     name: automation_garden
@@ -153,14 +138,22 @@ raspberrypi3_group:
     name: Raspberry Pi 3
     entities:
         - sensor.rpi3_temperature
+        - sensor.rpi3_cpu_usage
+        - sensor.rpi3_memory_usage
 
 raspberrypi2_group:
     name: Raspberry Pi 2
     entities:
         - sensor.rpi2_temperature
-        - sensor.cpu_use
-        - sensor.ram_free
-        - sensor.disk_use_
+        - sensor.rpi2_cpu_usage
+        - sensor.rpi2_memory_usage
+
+raspberrypi32_group:
+    name: Raspberry Pi 32
+    entities:
+        - sensor.rpi32_temperature
+        - sensor.rpi32_cpu_usage
+        - sensor.rpi32_memory_usage
 
 tracker_group:
     name: Tracker group
