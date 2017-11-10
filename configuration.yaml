@@ -102,3 +102,5 @@ automation: !include automation.yaml
 
 discovery:
 
+ios:
+

@@ -58,3 +58,16 @@
   action:
     service: light.turn_off
     entity_id: group.garage_group
+
+- alias: Notify Lars when door is opened
+  trigger:
+    platform: state
+    entity_id: sensor.front_door_opened
+  action:
+    service: notify.ios_larsiphone
+    data:
+      message: The front door was opened!
+      data:
+        push:
+          sound: "US-EN-Alexa-Front-Door-Opened.wav"
+
