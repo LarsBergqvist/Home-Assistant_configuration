@@ -71,6 +71,7 @@ outdoor:
     name: Outdoor
     entities:
         - switch.garden_lights
+        - light.outdoor_ceiling
         - sensor.garden_temp
         - sensor.outdoor_temp
         - sensor.outdoor_humidity
@@ -113,8 +114,7 @@ garage_group:
     entities:
         - sensor.garage_temp
         - sensor.garage_humidity
-        - light.hue_white_lamp_1
-        - light.hue_white_lamp_2
+        - light.garage
 
 automation_garden_group:
     name: automation_garden

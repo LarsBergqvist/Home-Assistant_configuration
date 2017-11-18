@@ -9,6 +9,10 @@ homeassistant:
 
 config:
 
+tts:
+  - platform: google
+    language: 'sv'
+
 map:
 
 http:

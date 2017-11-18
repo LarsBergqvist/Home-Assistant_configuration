@@ -1,11 +1,4 @@
 #
-# Light customizations
-#
-light.hue_white_lamp_1:
-  friendly_name: Left garage port
-light.hue_white_lamp_2:
-  friendly_name: Right garage port
-#
 # Switch customizations
 #
 switch.window_lights_downstairs:
