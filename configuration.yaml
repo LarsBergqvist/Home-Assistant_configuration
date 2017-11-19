@@ -102,7 +102,7 @@ camera: !include cameras.yaml
 
 group: !include groups.yaml
 
-automation: !include automation.yaml
+automation: !include automations.yaml
 
 discovery:
 

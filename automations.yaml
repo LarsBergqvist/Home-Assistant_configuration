@@ -1,4 +1,5 @@
-- alias: Turn on garden lights when sun sets
+- id: auto1
+  alias: Turn on garden lights when sun sets
   initial_state: True
   hide_entity: False
   trigger:
@@ -8,7 +9,8 @@
     service: switch.turn_on
     entity_id: switch.garden_lights
 
-- alias: Turn off garden lights when sun rises
+- id: auto2
+  alias: Turn off garden lights when sun rises
   initial_state: True
   hide_entity: False
   trigger:
@@ -18,7 +20,8 @@
     service: switch.turn_off
     entity_id: switch.garden_lights
 
-- alias: Turn on window lights 30min before sunset
+- id: auto3
+  alias: Turn on window lights 30min before sunset
   initial_state: True
   hide_entity: False
   trigger:
@@ -29,7 +32,8 @@
     service: switch.turn_on
     entity_id: group.window_lights
 
-- alias: Turn off indoor lights at night
+- id: auto4
+  alias: Turn off indoor lights at night
   initial_state: True
   hide_entity: False
   trigger:
@@ -39,7 +43,8 @@
     service: switch.turn_off
     entity_id: group.indoor_lights
 
-- alias: Turn on garage lights when sun sets
+- id: auto5
+  alias: Turn on garage lights when sun sets
   initial_state: True
   hide_entity: False
   trigger:
@@ -49,7 +54,8 @@
     service: light.turn_on
     entity_id: light.garage
 
-- alias: Turn on outdoor ceiling lights when sun sets
+- id: auto6
+  alias: Turn on outdoor ceiling lights when sun sets
   initial_state: True
   hide_entity: False
   trigger:
@@ -60,7 +66,8 @@
     service: light.turn_on
     entity_id: light.outdoor_ceiling
 
-- alias: Turn off garage lights when sun rises
+- id: auto7
+  alias: Turn off garage lights when sun rises
   initial_state: True
   hide_entity: False
   trigger:
@@ -70,7 +77,8 @@
     service: light.turn_off
     entity_id: light.garage
 
-- alias: Turn off outdoor ceiling lights when sun rises
+- id: auto8
+  alias: Turn off outdoor ceiling lights when sun rises
   initial_state: True
   hide_entity: False
   trigger:
@@ -81,10 +89,15 @@
     service: light.turn_off
     entity_id: light.outdoor_ceiling
 
-- alias: Notify Lars when door is opened
+- id: auto9
+  alias: Notify Lars when door is opened
   trigger:
     platform: state
     entity_id: sensor.front_door_opened
+  condition:
+    condition: state
+    entity_id: device_tracker.larsiphone
+    state: not_home
   action:
     service: notify.ios_larsiphone
     data:
