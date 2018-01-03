@@ -1,3 +1,18 @@
+- platform: rfxtrx
+  devices:
+    0a520901970000c5280189:
+      name: Telldus_Outdoor
+      data_type:
+       - Humidity
+       - Temperature
+
+- platform: rfxtrx
+  devices:
+    08500a023d0100d579:
+      name: Porch
+      data_type:
+       - Temperature
+
 # climate sensors
 - platform: mqtt
   state_topic: "Home/GroundFloor/Temperature"

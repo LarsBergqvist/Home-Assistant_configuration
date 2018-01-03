@@ -51,6 +51,7 @@
     platform: sun
   action:
   - data:
+      brightness: 190
       entity_id: light.garage
     service: light.turn_on
 - id: auto6
@@ -62,16 +63,15 @@
     offset: 00:20:00
     platform: sun
   action:
-    service: light.turn_on
-    data:
+  - data:
       entity_id: light.outdoor_ceiling
+    service: light.turn_on
 - id: auto7
   alias: Turn off garage lights when sun rises
   initial_state: true
   hide_entity: false
   trigger:
   - event: sunrise
-    offset: -01:00:00
     platform: sun
   action:
   - data:

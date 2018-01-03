@@ -13,6 +13,9 @@ tts:
   - platform: google
     language: 'sv'
 
+rfxtrx:
+  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2A2J-if00-port0
+
 map:
 
 http:
@@ -76,6 +79,20 @@ sensor yr:
         - dewpointTemperature
         
 sensor: !include sensors.yaml
+
+#sensor test:
+#  - platform: rfxtrx
+#    automatic_add: True
+
+binary_sensor:
+  platform: rfxtrx
+#  automatic_add: True
+  devices:
+    0b11000a031b9bf210010f70:
+      name: motion_detect
+      device_class: motion
+      off_delay:
+        seconds: 10
 
 mqtt:
   broker: 192.168.1.17
