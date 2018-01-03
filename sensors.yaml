@@ -1,19 +1,8 @@
-- platform: rfxtrx
-  devices:
-    0a520901970000c5280189:
-      name: Telldus_Outdoor
-      data_type:
-       - Humidity
-       - Temperature
-
-- platform: rfxtrx
-  devices:
-    08500a023d0100d579:
-      name: Porch
-      data_type:
-       - Temperature
-
 # climate sensors
+- platform: mqtt
+  state_topic: "Home/Porch/Temperature"
+  name: porch_temp
+  unit_of_measurement: "°C"
 - platform: mqtt
   state_topic: "Home/GroundFloor/Temperature"
   name: ground_floor_temp
@@ -50,9 +39,6 @@
   state_topic: "Home/Garage/Humidity"
   name: garage_humidity
   unit_of_measurement: "%"
-- platform: mqtt
-  state_topic: "Home/FrontDoor/Status"
-  name: front_door_opened
 - platform: mqtt
   state_topic: "Home/Laundry/Temperature"
   name: laundry_temp
@@ -100,17 +86,30 @@
   name: rpi32_memory_usage
   unit_of_measurement: "%"
 
+# event sensors
+- platform: mqtt
+  state_topic: "Home/FrontDoor/Status"
+  name: front_door_opened
+- platform: mqtt
+  state_topic: "Home/Porch/Motion"
+  name: porch_motion
 
+# other
 - platform: time_date
   display_options:
     - 'date_time'
 
+# template sensors
 - platform: template
   sensors:
     door_last_opened:
       friendly_name: 'Door last opened'
       icon_template: mdi:glassdoor
       value_template: '{{ as_timestamp(states.sensor.front_door_opened.last_updated) | timestamp_custom("%a %H:%M", True) }}'
+    porch_last_motion:
+      friendly_name: 'Porch last motion'
+      icon_template: mdi:walk
+      value_template: '{{ as_timestamp(states.sensor.porch_motion.last_updated) | timestamp_custom("%a %H:%M", True) }}'
     day_night:
       friendly_name: 'Day/Night'
       value_template: '{% if is_state("sun.sun", "above_horizon") %}Day{% else %}Night{% endif %}'

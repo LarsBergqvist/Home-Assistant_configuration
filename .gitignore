@@ -11,7 +11,10 @@ known_devices.yaml
 OZW_Log.txt
 pyozw.sqlite
 zwscene.xml
-phue.conf
+phue*.conf
 image.jpg
 image.png
 .ios.conf
+*.yaml.save
+tts
+

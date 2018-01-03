@@ -73,12 +73,10 @@ outdoor:
         - switch.garden_lights
         - light.outdoor_ceiling
         - sensor.garden_temp
-#        - sensor.outdoor_temp
-#        - sensor.outdoor_humidity
-        - sensor.telldus_outdoor_temperature
-        - sensor.telldus_outdoor_humidity
-        - sensor.porch_temperature
-        - binary_sensor.motion_detect
+        - sensor.outdoor_temp
+        - sensor.outdoor_humidity
+        - sensor.porch_temp
+        - sensor.porch_last_motion
 
 indoor_lights:
     name: Indoor lights
