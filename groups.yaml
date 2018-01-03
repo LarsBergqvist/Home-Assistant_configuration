@@ -65,17 +65,17 @@ topfloor:
         - switch.window_lights_upstairs
         - switch.floor_light_upstairs
         - sensor.top_floor_temp
-        - sensor.top_floor_pressure
 
 outdoor:
     name: Outdoor
     entities:
         - switch.garden_lights
         - light.outdoor_ceiling
-        - sensor.garden_temp
         - sensor.outdoor_temp
-        - sensor.outdoor_humidity
+        - sensor.garden_temp
         - sensor.porch_temp
+        - sensor.outdoor_humidity
+        - sensor.top_floor_pressure
         - sensor.porch_last_motion
 
 indoor_lights:
@@ -93,7 +93,7 @@ window_lights:
         - switch.window_lights_upstairs
     
 weather_and_sun:
-    name: Sun, moon and weather(yr.no)
+    name: Sun, moon and weather (yr.no)
     entities:
         - sensor.date__time
         - sensor.day_night
@@ -114,9 +114,9 @@ weather_and_sun:
 garage_group:
     name: Garage
     entities:
+        - light.garage
         - sensor.garage_temp
         - sensor.garage_humidity
-        - light.garage
 
 automation_garden_group:
     name: automation_garden
