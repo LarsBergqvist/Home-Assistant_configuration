@@ -69,5 +69,6 @@ sensor.yr_wind_direction:
 sensor.yr_cloudiness:
   friendly_name: yr Cloudiness
   icon: mdi:weather-cloudy
-
-
+sensor.yr_humidity:
+  friendly_name: yr Humidity
+  icon: mdi:water-percent

@@ -10,6 +10,7 @@ default_view:
         - group.weather_and_sun
         - group.garage_group
         - group.laundry_room
+        - group.telldus
 
 media:
     view: yes
@@ -43,6 +44,13 @@ automation:
 #
 # Groups that are not views
 #
+telldus:
+    name: Telldus
+    entities:
+        - switch.telldus_1
+        - switch.telldus_2
+        - switch.telldus_3
+
 laundry_room:
     name: Laundry room
     entities:
@@ -101,6 +109,7 @@ weather_and_sun:
         - sensor.sunrise
         - sensor.moon
         - sensor.yr_temperature
+        - sensor.yr_humidity
         - sensor.yr_pressure
         - sensor.yr_wind_speed
         - sensor.yr_wind_direction
