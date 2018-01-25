@@ -108,3 +108,13 @@ discovery:
 
 ios:
 
+binary_sensor:
+  - platform: mqtt
+    name: "Back door open status"
+    state_topic: "Home/Backdoor/Open"
+    payload_on: "On"
+    payload_off: "Off"
+    qos: 0
+    device_class: opening
+    value_template: '{{ value.x }}'
+

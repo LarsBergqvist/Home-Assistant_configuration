@@ -63,8 +63,11 @@ groundfloor:
         - switch.window_lights_downstairs
         - switch.wall_lights_downstairs
         - sensor.ground_floor_temp
+        - sensor.ground_bathroom_temp
         - sensor.ground_floor_humidity
+        - sensor.ground_bathroom_humidity
         - sensor.door_last_opened
+        - binary_sensor.back_door_open_status
         - media_player.squeezebox_radio
 
 topfloor:

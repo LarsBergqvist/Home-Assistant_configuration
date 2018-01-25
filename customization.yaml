@@ -27,6 +27,12 @@ sensor.top_floor_temp:
 sensor.top_floor_pressure:
   friendly_name: Barometric pressure
   icon: mdi:speedometer
+sensor.ground_bathroom_temp:
+  friendly_name: Bathroom Temperature
+  icon: mdi:thermometer
+sensor.ground_bathroom_humidity:
+  friendly_name: Bathroom Humidity
+  icon: mdi:water-percent
 sensor.ground_floor_temp:
   friendly_name: Temperature
   icon: mdi:thermometer

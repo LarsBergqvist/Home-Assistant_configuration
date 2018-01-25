@@ -1,8 +1,17 @@
+
 # climate sensors
 - platform: mqtt
   state_topic: "Home/Porch/Temperature"
   name: porch_temp
   unit_of_measurement: "°C"
+- platform: mqtt
+  state_topic: "Home/GroundFloor/Bathroom/Temperature"
+  name: ground_bathroom_temp
+  unit_of_measurement: "°C"
+- platform: mqtt
+  state_topic: "Home/GroundFloor/Bathroom/Humidity"
+  name: ground_bathroom_humidity
+  unit_of_measurement: "%"
 - platform: mqtt
   state_topic: "Home/GroundFloor/Temperature"
   name: ground_floor_temp
@@ -103,7 +112,7 @@
 - platform: template
   sensors:
     door_last_opened:
-      friendly_name: 'Door last opened'
+      friendly_name: 'Front door last opened'
       icon_template: mdi:glassdoor
       value_template: '{{ as_timestamp(states.sensor.front_door_opened.last_updated) | timestamp_custom("%a %H:%M", True) }}'
     porch_last_motion:
