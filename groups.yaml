@@ -4,6 +4,7 @@
 default_view:
     view: yes
     entities:
+        - group.detectors
         - group.groundfloor
         - group.topfloor
         - group.outdoor
@@ -66,9 +67,15 @@ groundfloor:
         - sensor.ground_bathroom_temp
         - sensor.ground_floor_humidity
         - sensor.ground_bathroom_humidity
+        - media_player.squeezebox_radio
+
+detectors:
+    name: Detectors
+    control: hidden
+    entities:
         - sensor.door_last_opened
         - binary_sensor.back_door_open_status
-        - media_player.squeezebox_radio
+        - sensor.porch_last_motion
 
 topfloor:
     name: Top floor
@@ -87,7 +94,6 @@ outdoor:
         - sensor.porch_temp
         - sensor.outdoor_humidity
         - sensor.top_floor_pressure
-        - sensor.porch_last_motion
 
 indoor_lights:
     name: Indoor lights

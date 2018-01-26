@@ -111,10 +111,10 @@ ios:
 binary_sensor:
   - platform: mqtt
     name: "Back door open status"
-    state_topic: "Home/Backdoor/Open"
-    payload_on: "On"
-    payload_off: "Off"
+    state_topic: "Home/BackDoor/Open"
+    payload_on: "1"
+    payload_off: "0"
     qos: 0
     device_class: opening
-    value_template: '{{ value.x }}'
+    value_template: '{{ value }}'
 
