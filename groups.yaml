@@ -34,6 +34,7 @@ computers_stat:
         - group.raspberrypi3_group
         - group.raspberrypi2_group
         - group.raspberrypi32_group
+        - sensor.ssl_cert_expiry
 
 automation:
     view: yes

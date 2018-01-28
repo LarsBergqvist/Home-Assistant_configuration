@@ -17,8 +17,9 @@ map:
 
 http:
   api_password: !secret ha_pwd
-#  ssl_certificate: !secret ssl_certificate
-#  ssl_key: !secret ssl_key
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url
 
 # purge db after 3 days. problems with sqlite
 recorder:
