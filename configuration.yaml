@@ -40,6 +40,7 @@ logger:
   default: error
   logs:
     homeassistant.components.media_player: critical
+    requests.packages.urllib3.connectionpool: critical
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:

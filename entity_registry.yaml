@@ -1,0 +1,72 @@
+media_player.squeezebox_radio:
+  name:
+  platform: squeezebox
+  unique_id: 00:04:20:2b:6c:9e
+media_player.vardagsrum:
+  name:
+  platform: sonos
+  unique_id: RINCON_B8E937920C0601400
+media_player.kitchen:
+  name:
+  platform: sonos
+  unique_id: RINCON_B8E93783949201400
+media_player.sovrum:
+  name:
+  platform: sonos
+  unique_id: RINCON_5CAAFD44CC5001400
+sensor.larsiphone_battery_state:
+  name:
+  platform: ios
+  unique_id: state_larsiphone
+sensor.larsiphone_battery_level:
+  name:
+  platform: ios
+  unique_id: level_larsiphone
+sensor.marias_iphone_battery_state:
+  name:
+  platform: ios
+  unique_id: state_marias_iphone
+sensor.marias_iphone_battery_level:
+  name:
+  platform: ios
+  unique_id: level_marias_iphone
+sensor.lipad_battery_level:
+  name:
+  platform: ios
+  unique_id: level_lipad
+sensor.lipad_battery_state:
+  name:
+  platform: ios
+  unique_id: state_lipad
+light.outdoor_ceiling_3:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:6b:b0:84-0b
+light.outdoor_ceiling_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:44:15:7c-0b
+light.side_garage_door:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:ff:fa:35-0b
+light.right_garage_door:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:b2:97:bb-0b
+light.spare_bulb:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:fe:fd:b7-0b
+light.outdoor_ceiling_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:5e:15:d6-0b
+light.laundry_door:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:ff:f9:9e-0b
+light.left_garage_door:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:86:9a:33-0b

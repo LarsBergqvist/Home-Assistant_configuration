@@ -10,4 +10,4 @@
   password: !secret motion_pwd
 - platform: rpi_camera
   name: rpi
-  timelapse: 5000
+  timelapse: 1000

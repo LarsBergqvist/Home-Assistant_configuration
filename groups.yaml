@@ -128,7 +128,10 @@ weather_and_sun:
 #family:
 #    name: Family
 #    entities:
-#        - device_tracker.owntracks_lars
+#	- device_tracker.lars_larsnexus
+#        - device_tracker.lars_larsiphone
+#        - device_tracker.lars_malteiphone
+#        - device_tracker.lars_mariasiphone
 
 garage_group:
     name: Garage
