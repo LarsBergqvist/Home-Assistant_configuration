@@ -17,4 +17,6 @@ image.png
 .ios.conf
 *.yaml.save
 tts
+*.db-shm
+*.db-wal
 

@@ -115,5 +115,5 @@
   id: '1511102616915'
   trigger:
   - event: sunset
-    offset: 02:00:00
+    offset: 00:21:00
     platform: sun
