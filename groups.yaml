@@ -27,6 +27,7 @@ cams:
         - camera.outdoor1
         - camera.outdoor2
         - camera.rpi
+        - camera.backdoor
 
 computers_stat:
     view: yes

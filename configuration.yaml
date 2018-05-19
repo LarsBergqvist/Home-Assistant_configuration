@@ -6,6 +6,8 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Stockholm
   customize: !include customization.yaml
+  whitelist_external_dirs:
+    - /tmp
 
 config:
 

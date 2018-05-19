@@ -11,3 +11,8 @@
 - platform: rpi_camera
   name: rpi
   timelapse: 1000
+- platform: mjpeg
+  mjpeg_url: http://192.168.1.18:8081
+  name: backdoor
+  username: !secret motion_user
+  password: !secret motion_pwd
