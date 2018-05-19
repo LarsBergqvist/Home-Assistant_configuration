@@ -85,6 +85,7 @@ topfloor:
         - switch.window_lights_upstairs
         - switch.floor_light_upstairs
         - sensor.top_floor_temp
+        - sensor.workroom_temp
 
 outdoor:
     name: Outdoor

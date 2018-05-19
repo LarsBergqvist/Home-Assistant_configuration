@@ -5,6 +5,10 @@
   command: !secret cert_check_command
 # climate sensors
 - platform: mqtt
+  state_topic: "Home/Workroom/Temperature"
+  name: workroom_temp
+  unit_of_measurement: "°C"
+- platform: mqtt
   state_topic: "Home/Porch/Temperature"
   name: porch_temp
   unit_of_measurement: "°C"

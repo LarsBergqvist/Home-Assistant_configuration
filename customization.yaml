@@ -21,6 +21,9 @@ switch.dehumidifier:
 #
 # Sensor customizations
 #
+sensor.workroom_temp:
+  friendly_name: Work room temp
+  icon: mdi:thermometer
 sensor.top_floor_temp:
   friendly_name: Temperature
   icon: mdi:thermometer
