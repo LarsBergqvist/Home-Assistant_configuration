@@ -67,7 +67,9 @@ groundfloor:
         - switch.wall_lights_downstairs
         - sensor.ground_floor_temp
         - sensor.ground_bathroom_temp
+        - sensor.hall_temperature
         - sensor.ground_floor_humidity
+        - sensor.hall_humidity
         - sensor.ground_bathroom_humidity
         - media_player.squeezebox_radio
 
@@ -76,8 +78,11 @@ detectors:
     control: hidden
     entities:
         - sensor.door_last_opened
-        - binary_sensor.back_door_open_status
+#        - binary_sensor.back_door_open_status
         - sensor.porch_last_motion
+        - alarm_control_panel.husbyvagen_alarm
+        - binary_sensor.altandorr
+        - binary_sensor.entredorr
 
 topfloor:
     name: Top floor
@@ -86,6 +91,8 @@ topfloor:
         - switch.floor_light_upstairs
         - sensor.top_floor_temp
         - sensor.workroom_temp
+        - sensor.allrum_overvaning_temperature
+        - sensor.allrum_overvaning_humidity
 
 outdoor:
     name: Outdoor

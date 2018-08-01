@@ -1,3 +1,4 @@
+.storage/
 .config_entries.json
 .HA_VERSION
 deps

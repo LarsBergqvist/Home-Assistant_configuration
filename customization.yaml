@@ -81,3 +81,12 @@ sensor.yr_cloudiness:
 sensor.yr_humidity:
   friendly_name: yr Humidity
   icon: mdi:water-percent
+sensor.hall_humidity:
+  friendly_name: Hall humidity
+  icon: mdi:water-percent
+sensor.allrum_overvaning_humidity:
+  friendly_name: Allrum humidity
+  icon: mdi:water-percent
+sensor.allrum_overvaning_temperature:
+  friendly_name: Allrum temperature
+  icon: mdi:thermometer

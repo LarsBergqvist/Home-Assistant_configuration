@@ -106,14 +106,14 @@
       data:
         push:
           sound: US-EN-Alexa-Front-Door-Opened.wav
-- action:
+- id: '1511102616915'
+  alias: Turn on upstairs window lights at night
+  trigger:
+  - event: sunset
+    offset: 00:00:00
+    platform: sun
+  condition: []
+  action:
   - data:
       entity_id: switch.window_lights_upstairs
     service: switch.turn_on
-  alias: Turn on upstairs window lights at night
-  condition: []
-  id: '1511102616915'
-  trigger:
-  - event: sunset
-    offset: 00:21:00
-    platform: sun

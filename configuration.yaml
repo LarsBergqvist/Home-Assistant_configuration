@@ -124,3 +124,7 @@ binary_sensor:
     device_class: opening
     value_template: '{{ value }}'
 
+verisure:
+    username: !secret vrname
+    password: !secret vrpwd
+
