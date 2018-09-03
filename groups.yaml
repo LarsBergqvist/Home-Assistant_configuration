@@ -78,11 +78,10 @@ detectors:
     control: hidden
     entities:
         - sensor.door_last_opened
-#        - binary_sensor.back_door_open_status
         - sensor.porch_last_motion
         - alarm_control_panel.husbyvagen_alarm
-        - binary_sensor.altandorr
-        - binary_sensor.entredorr
+        - sensor.entredorr_state
+        - sensor.altandorr_state
 
 topfloor:
     name: Top floor

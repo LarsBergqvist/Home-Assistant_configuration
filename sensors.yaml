@@ -119,6 +119,14 @@
 # template sensors
 - platform: template
   sensors:
+    altandorr_state:
+      friendly_name: 'Back door state'
+      value_template: '{% if is_state("binary_sensor.altandorr", "on") %}Open{% else %}Closed{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.altandorr", "on") %}mdi:door-open{% else %}mdi:door-closed{% endif %}'
+    entredorr_state:
+      friendly_name: 'Front door state'
+      value_template: '{% if is_state("binary_sensor.entredorr", "on") %}Open{% else %}Closed{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.entredorr", "on") %}mdi:door-open{% else %}mdi:door-closed{% endif %}'
     door_last_opened:
       friendly_name: 'Front door last opened'
       icon_template: mdi:glassdoor

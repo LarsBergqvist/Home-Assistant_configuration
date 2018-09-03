@@ -21,27 +21,27 @@
       entity_id: switch.garden_lights
 - id: auto3
   alias: Turn on downstairs window lights at sunset
-  initial_state: true
-  hide_entity: false
   trigger:
   - event: sunset
-    offset: 00:05
+    offset: -01:05
     platform: sun
   action:
   - data:
       entity_id: switch.window_lights_downstairs
     service: switch.turn_on
-- id: auto4
-  alias: Turn off indoor lights at night
   initial_state: true
   hide_entity: false
+- id: auto4
+  alias: Turn off indoor lights at night
   trigger:
-  - at: '22:30:00'
+  - at: '22:00:00'
     platform: time
   action:
-    service: switch.turn_off
-    data:
+  - data:
       entity_id: group.indoor_lights
+    service: switch.turn_off
+  initial_state: true
+  hide_entity: false
 - id: auto5
   alias: Turn on garage lights when sun sets
   initial_state: true
@@ -110,7 +110,7 @@
   alias: Turn on upstairs window lights at night
   trigger:
   - event: sunset
-    offset: 00:00:00
+    offset: 00:30:00
     platform: sun
   condition: []
   action:
