@@ -46,6 +46,9 @@ computers_stat:
         - group.raspberrypi2_group
         - group.raspberrypi32_group
         - sensor.ssl_cert_expiry
+        - sensor.speedtest_download
+        - sensor.speedtest_upload
+        - sensor.speedtest_ping
 
 automation:
     view: yes

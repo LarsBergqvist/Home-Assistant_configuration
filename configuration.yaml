@@ -129,4 +129,3 @@ binary_sensor:
 verisure:
     username: !secret vrname
     password: !secret vrpwd
-
