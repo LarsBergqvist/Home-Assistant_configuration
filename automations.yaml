@@ -106,6 +106,18 @@
       data:
         push:
           sound: US-EN-Alexa-Front-Door-Opened.wav
+- id: auto9
+  alias: Turn off aquarium light at night
+  trigger:
+  - at: '21:00:00'
+    platform: time
+  action:
+  - data:
+      entity_id: switch.aquarium_light
+    service: switch.turn_off
+  initial_state: true
+  hide_entity: false
+
 - id: '1511102616915'
   alias: Turn on upstairs window lights at night
   trigger:
