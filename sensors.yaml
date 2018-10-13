@@ -72,6 +72,10 @@
 
 # computer sensors
 - platform: mqtt
+  state_topic: "Home/RPI2/DownloadSpeed"
+  name: rpi2_downloadspeed
+  unit_of_measurement: "Mbit/s"
+- platform: mqtt
   state_topic: "Home/RPI3/Temp"
   name: rpi3_temperature
   unit_of_measurement: "°C"

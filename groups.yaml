@@ -202,6 +202,7 @@ raspberrypi2_group:
         - sensor.rpi2_temperature
         - sensor.rpi2_cpu_usage
         - sensor.rpi2_memory_usage
+        - sensor.rpi2_downloadspeed
 
 raspberrypi32_group:
     name: Raspberry Pi 32
