@@ -23,7 +23,7 @@
   alias: Turn on downstairs window lights at sunset
   trigger:
   - event: sunset
-    offset: -01:05
+    offset: -00:20
     platform: sun
   action:
   - data:
@@ -80,16 +80,16 @@
     service: light.turn_off
 - id: auto8
   alias: Turn off outdoor ceiling lights when sun rises
-  initial_state: true
-  hide_entity: false
   trigger:
   - event: sunrise
-    offset: -01:10:00
+    offset: -00:10:00
     platform: sun
   action:
   - data:
       entity_id: light.outdoor_ceiling
     service: light.turn_off
+  initial_state: true
+  hide_entity: false
 - id: auto9
   alias: Notify Lars when door is opened
   trigger:

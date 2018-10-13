@@ -17,6 +17,8 @@ tts:
 
 map:
 
+frontend:
+
 http:
   api_password: !secret ha_pwd
   ssl_certificate: !secret ssl_certificate
