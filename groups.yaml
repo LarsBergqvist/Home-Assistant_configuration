@@ -3,6 +3,7 @@
 #
 default_view:
     view: yes
+    icon: mdi:home
     entities:
         - group.detectors
         - group.groundfloor
@@ -11,10 +12,18 @@ default_view:
         - group.weather_and_sun
         - group.garage_group
         - group.laundry_room
-        - group.telldus
+        - group.aquarium
+
+links:
+    view: yes
+    icon: mdi:web
+    entities:
+        - weblink.grafana
+        - weblink.charts
 
 media:
     view: yes
+    icon: mdi:disc-player
     entities:
         - media_player.squeezebox_radio
         - media_player.kitchen
@@ -23,14 +32,15 @@ media:
 
 cams:
     view: yes
+    icon: mdi:cctv
     entities:
-        - camera.outdoor1
         - camera.outdoor2
         - camera.rpi
-        - camera.backdoor
+        - camera.aqua_cam
 
 computers_stat:
     view: yes
+    icon: mdi:desktop-classic
     entities:
         - group.raspberrypi3_group
         - group.raspberrypi2_group
@@ -39,20 +49,24 @@ computers_stat:
 
 automation:
     view: yes
+    icon: mdi:home-automation
     entities:
         - group.automation_garden_group
         - group.automation_indoor_group
         - group.automation_garage_group
 
-#
-# Groups that are not views
-#
 telldus:
+    view: yes
+    icon: mdi:flash
     name: Telldus
     entities:
         - switch.telldus_1
         - switch.telldus_2
-        - switch.telldus_3
+        - switch.aquarium_light
+
+#
+# Groups that are not views
+#
 
 laundry_room:
     name: Laundry room
@@ -72,6 +86,12 @@ groundfloor:
         - sensor.hall_humidity
         - sensor.ground_bathroom_humidity
         - media_player.squeezebox_radio
+
+aquarium:
+    name: Aquarium
+    entities:
+        - switch.aquarium_light
+        - camera.aqua_cam
 
 detectors:
     name: Detectors

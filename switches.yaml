@@ -33,6 +33,6 @@
   name: "Telldus 2"
   command_topic: "Telldus/Outlet/15"
 - platform: mqtt
-  name: "Telldus 3"
+  name: "Aquarium light"
   command_topic: "Telldus/Outlet/14"
 
