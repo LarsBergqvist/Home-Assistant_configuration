@@ -14,6 +14,11 @@ default_view:
         - group.laundry_room
         - group.aquarium
 
+forecast:
+    view: yes
+    icon: mdi:weather-partlycloudy
+    entities:
+        - weather.smhi_home
 links:
     view: yes
     icon: mdi:web
