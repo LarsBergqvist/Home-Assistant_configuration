@@ -139,11 +139,11 @@
     door_last_opened:
       friendly_name: 'Front door last opened'
       icon_template: mdi:glassdoor
-      value_template: '{{ as_timestamp(states.sensor.front_door_opened.last_updated) | timestamp_custom("%a %H:%M", True) }}'
+      value_template: '{{ as_timestamp(states.sensor.front_door_opened.last_changed) | timestamp_custom("%a %H:%M", True) }}'
     porch_last_motion:
       friendly_name: 'Porch last motion'
       icon_template: mdi:walk
-      value_template: '{{ as_timestamp(states.sensor.porch_motion.last_updated) | timestamp_custom("%a %H:%M", True) }}'
+      value_template: '{{ as_timestamp(states.sensor.porch_motion.last_changed) | timestamp_custom("%a %H:%M", True) }}'
     day_night:
       friendly_name: 'Day/Night'
       value_template: '{% if is_state("sun.sun", "above_horizon") %}Day{% else %}Night{% endif %}'
