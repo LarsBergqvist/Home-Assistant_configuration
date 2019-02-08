@@ -17,6 +17,8 @@ tts:
 
 map:
 
+system_health:
+
 frontend:
 
 http:

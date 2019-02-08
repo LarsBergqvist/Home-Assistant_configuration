@@ -149,7 +149,7 @@ window_lights:
 weather_and_sun:
     name: Sun, moon and weather (yr.no)
     entities:
-        - sensor.date__time
+        - sensor.date_time
         - sensor.day_night
         - sensor.sunset
         - sensor.sunrise
@@ -185,7 +185,7 @@ automation_garden_group:
 automation_indoor_group:
     name: automation_indoor
     entities:
-        - automation.turn_on_window_lights_at_sunset
+#        - automation.turn_on_window_lights_at_sunset
         - automation.turn_off_indoor_lights_at_night
 
 automation_garage_group:
