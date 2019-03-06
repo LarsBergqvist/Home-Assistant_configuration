@@ -157,6 +157,9 @@
   - condition: state
     entity_id: input_boolean.do_notify_on_porch_motion
     state: 'on'
+  - condition: state
+    entity_id: device_tracker.larsiphone
+    state: not_home
   action:
   - data:
       message: Porch motion detected!
