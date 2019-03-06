@@ -30,7 +30,10 @@
   alias: Turn on downstairs window lights at sunset
   trigger:
   - event: sunset
-    offset: -00:20
+    offset: -00:05
+    platform: sun
+  - event: sunset
+    offset: 00:10
     platform: sun
   action:
   - data:
@@ -42,6 +45,8 @@
   alias: Turn off indoor lights at night
   trigger:
   - at: '22:00:00'
+    platform: time
+  - at: '22:30:00'
     platform: time
   action:
   - data:
@@ -135,8 +140,31 @@
   - event: sunset
     offset: 00:30:00
     platform: sun
+  - event: sunset
+    offset: 00:40:00
+    platform: sun
   condition: []
   action:
   - data:
       entity_id: switch.window_lights_upstairs
     service: switch.turn_on
+- id: '1551883696020'
+  alias: Notify Lars on porch motion
+  trigger:
+  - entity_id: sensor.porch_motion
+    platform: state
+  condition:
+  - condition: state
+    entity_id: input_boolean.do_notify_on_porch_motion
+    state: 'on'
+  action:
+  - data:
+      message: Porch motion detected!
+    service: notify.ios_larsiphone
+  - data:
+      entity_id: input_boolean.do_notify_on_porch_motion
+    service: input_boolean.turn_off
+  - delay: 0:05
+  - data:
+      entity_id: input_boolean.do_notify_on_porch_motion
+    service: input_boolean.turn_on

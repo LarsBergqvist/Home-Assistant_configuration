@@ -131,3 +131,8 @@ binary_sensor:
 verisure:
     username: !secret vrname
     password: !secret vrpwd
+
+input_boolean:
+  do_notify_on_porch_motion:
+    name: Send notifications on porch motions
+    initial: on
