@@ -136,3 +136,12 @@ input_boolean:
   do_notify_on_porch_motion:
     name: Send notifications on porch motions
     initial: on
+
+speedtestdotnet:
+  scan_interval:
+    hours: 1
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
