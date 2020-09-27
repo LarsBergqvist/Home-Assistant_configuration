@@ -1,3 +1,7 @@
+This is deprecated for modern versions of Home Assistant  
+I currently use this configuration instead:  
+https://github.com/LarsBergqvist/home-assistant-config
+
 # Home-Assistant_configuration
 My configurations for Home Assistant
 
